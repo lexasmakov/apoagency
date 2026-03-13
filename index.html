@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APO — Kreativní vývojářské studio</title>
+    <meta name="description"
+        content="Jsme kreativní vývojářské studio zaměřené na budování digitálních platforem v České republice.">
+
+    <!-- Preconnect to Google Fonts if used -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Preload the Sequel font file so it doesn't flash -->
+    <link rel="preload" href="fonts/Sequel100Black-55.ttf" as="font" type="font/ttf" crossorigin>
+
+    <!-- Tell browser this page renders fast -->
+    <meta name="theme-color" content="#080808">
+
+    <!-- Prevent layout shift from font loading -->
+    <style>
+        /* Critical CSS inline — prevents flash of unstyled content */
+        body {
+            background: #080808;
+            color: #f0f0f0;
+            margin: 0;
+        }
+
+        nav {
+            background: transparent;
+        }
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="page-loader">
+        <div class="loader-content">
+            <div class="loader-logo">APO</div>
+            <div class="loader-bar">
+                <div class="loader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-bg" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div id="cursor-follower"></div>
+
+    <nav id="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">APO</a>
+            <ul class="nav-links">
+                <li><a href="#sluzby">Služby</a></li>
+                <li><a href="#reference">Reference</a></li>
+                <li><a href="#kontakt" class="btn-nav">Kontakt</a></li>
+            </ul>
+            <button id="mobile-menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div id="mobile-nav">
+            <a href="#sluzby">Služby</a>
+            <a href="#reference">Reference</a>
+            <a href="#kontakt">Kontakt</a>
+        </div>
+    </nav>
+
+    <header class="hero fade-up">
+        <div class="container hero-content">
+            <h1 class="hero-headline">
+                Tvoříme<br>
+                <span class="cycling-wrapper">
+                    <span class="cycling-text"></span>
+                </span><br>
+                svět, který<br>
+                prodává.
+            </h1>
+            <p class="subheadline">Jsme kreativní vývojářské studio zaměřené na budování digitálních platforem.</p>
+            <a href="#kontakt" class="btn-primary">Kontaktujte nás</a>
+        </div>
+    </header>
+
+    <section id="sluzby" class="fade-up">
+        <div class="container">
+            <h2 class="section-title">Co vše zvládneme</h2>
+            <div class="services-grid">
+                <!-- Card 1: Weby -->
+                <div class="service-card" style="transition-delay: 0s;">
+                    <div class="visual-zone yellow-glow">
+                        <div class="glow"></div>
+                        <div class="mockup mockup-browser">
+                            <div class="browser-top">
+                                <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
+                            </div>
+                            <div class="browser-content">
+                                <div class="bar-l"></div>
+                                <div class="bar-s"></div>
+                                <div class="bar-m"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-zone">
+                        <h3>Weby</h3>
+                        <p>Rychlé, moderní weby postavené na míru. Od vizitky po komplexní firemní web.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: E-shopy -->
+                <div class="service-card" style="transition-delay: 0.1s;">
+                    <div class="visual-zone orange-glow">
+                        <div class="glow"></div>
+                        <div class="mockup mockup-eshop">
+                            <div class="product-img"></div>
+                            <div class="product-title"></div>
+                            <div class="product-price"></div>
+                            <div class="product-btn"></div>
+                        </div>
+                    </div>
+                    <div class="text-zone">
+                        <h3>E-shopy</h3>
+                        <p>Prodávejte online. Navrhneme a postavíme e-shop, který konvertuje.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Branding -->
+                <div class="service-card" style="transition-delay: 0.2s;">
+                    <div class="visual-zone white-glow">
+                        <div class="glow"></div>
+                        <div class="mockup mockup-branding">
+                            <div class="branding-logo">A</div>
+                            <div class="branding-grid"></div>
+                        </div>
+                    </div>
+                    <div class="text-zone">
+                        <h3>Branding</h3>
+                        <p>Logo, barvy, typografie. Vytvoříme identitu, která se nezapomíná.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Marketing -->
+                <div class="service-card" style="transition-delay: 0.3s;">
+                    <div class="visual-zone green-glow">
+                        <div class="glow"></div>
+                        <div class="mockup mockup-marketing">
+                            <div class="chart-bar h-40"></div>
+                            <div class="chart-bar h-80"></div>
+                            <div class="chart-bar h-60"></div>
+                            <div class="chart-bar h-90"></div>
+                        </div>
+                    </div>
+                    <div class="text-zone">
+                        <h3>Marketing</h3>
+                        <p>Správa sociálních sítí, Google Business Profile a základní SEO.</p>
+                    </div>
+                </div>
+
+                <!-- Card 5: Konzultace -->
+                <div class="service-card" style="transition-delay: 0.4s;">
+                    <div class="visual-zone blue-glow">
+                        <div class="glow"></div>
+                        <div class="mockup mockup-consulting">
+                            <div class="bubble bubble-l"></div>
+                            <div class="bubble bubble-r"></div>
+                            <div class="bubble bubble-l"></div>
+                        </div>
+                    </div>
+                    <div class="text-zone">
+                        <h3>Konzultace</h3>
+                        <p>Nevíte, kde začít? Projdeme váš digitální svět a navrhneme řešení.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reference" class="fade-up">
+        <div class="container">
+            <h2 class="section-title">Reference</h2>
+            <div class="portfolio-grid">
+                <article class="portfolio-card">
+                    <a href="https://relaxplzen.cz/test" target="_blank" class="card-link">
+                        <div class="card-img-wrapper">
+                            <div class="skeleton"></div>
+                            <img class="portfolio-img" src="img/sauna1.jpg" alt="Relax Plzeň" loading="lazy" width="600"
+                                height="338" />
+                        </div>
+                    </a>
+                    <div class="portfolio-info">
+                        <h3>Relax Plzeň</h3>
+                        <p>Moderní webové řešení pro wellness centrum.</p>
+                        <a href="https://relaxplzen.cz/test" target="_blank" class="btn-tag">Přejít na web</a>
+                    </div>
+                </article>
+                <article class="portfolio-card">
+                    <div class="card-img-wrapper">
+                        <div class="skeleton"></div>
+                        <img class="portfolio-img"
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 338'%3E%3C/svg%3E"
+                            alt="Design Studio" loading="lazy" width="600" height="338" />
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Design Studio</h3>
+                        <p>Kompletní vizuální identita a branding.</p>
+                        <span class="tag">Branding</span>
+                    </div>
+                </article>
+                <article class="portfolio-card">
+                    <div class="card-img-wrapper">
+                        <div class="skeleton"></div>
+                        <img class="portfolio-img"
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 338'%3E%3C/svg%3E"
+                            alt="E-shop Pro" loading="lazy" width="600" height="338" />
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>E-shop Pro</h3>
+                        <p>Výkonný e-shop s důrazem na konverzi.</p>
+                        <span class="tag">E-shop</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="klienti" class="fade-up">
+        <div class="container">
+            <h2 class="section-title center">Věří nám</h2>
+            <div class="ticker">
+                <div class="ticker-scroll">
+                    <span>Klient 1</span> <span class="dot"></span>
+                    <span>Klient 2</span> <span class="dot"></span>
+                    <span>Klient 3</span> <span class="dot"></span>
+                    <span>Klient 4</span> <span class="dot"></span>
+                    <span>Klient 5</span> <span class="dot"></span>
+                    <span>Klient 6</span> <span class="dot"></span>
+                    <!-- Duplicated for seamless loop -->
+                    <span>Klient 1</span> <span class="dot"></span>
+                    <span>Klient 2</span> <span class="dot"></span>
+                    <span>Klient 3</span> <span class="dot"></span>
+                    <span>Klient 4</span> <span class="dot"></span>
+                    <span>Klient 5</span> <span class="dot"></span>
+                    <span>Klient 6</span> <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="fade-up">
+        <div class="container">
+            <h2 class="section-title">Pojďme tvořit</h2>
+            <div class="contact-wrapper">
+                <div class="contact-form">
+                    <!-- Replace with real Formspree URL -->
+                    <form action="https://formspree.io/f/placeholder" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Jméno" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Předmět" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Zpráva (volitelné)" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Odeslat</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <p class="contact-label">Napište nám přímo:</p>
+                    <h3 id="email-copy" class="email-address">ahoj@apo.cz</h3>
+                    <p class="muted">Kliknutím zkopírujete</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-left">
+                <span class="logo">APO</span>
+                <p>Kreativní vývojářské studio.</p>
+            </div>
+            <div class="footer-right">
+                <a href="#">Instagram</a>
+                <a href="mailto:ahoj@apo.cz">Email</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 APO. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+
+    <div id="toast">Zkopírováno!</div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
