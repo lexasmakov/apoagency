@@ -633,11 +633,18 @@ section {
     transform: scale(1.02);
 }
 
+.card-link {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .card-img-wrapper {
     position: relative;
     aspect-ratio: 16 / 9;
     overflow: hidden;
     border-radius: 12px 12px 0 0;
+    margin-bottom: 20px;
 }
 
 .portfolio-img {
@@ -691,14 +698,22 @@ section {
     margin-bottom: 12px;
 }
 
-.tag {
+.btn-tag {
     display: inline-block;
-    padding: 4px 12px;
+    padding: 8px 20px;
     background-color: var(--accent-color);
-    color: #000;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-weight: 900;
+    color: #080808;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+    margin-top: 12px;
+}
+
+.btn-tag:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
 }
 
 /* Client Ticker */
