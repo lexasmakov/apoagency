@@ -251,11 +251,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const text = contactHeading.textContent;
       contactHeading.innerHTML = '';
       [...text].forEach(char => {
-        const span = document.createElement('span');
-        span.textContent = char;
-        if (char === ' ') span.style.width = '0.3em';
-        span.style.display = 'inline-block';
-        contactHeading.appendChild(span);
+        if (char === ' ') {
+          contactHeading.appendChild(document.createTextNode(' '));
+        } else {
+          const span = document.createElement('span');
+          span.textContent = char;
+          span.style.display = 'inline-block';
+          contactHeading.appendChild(span);
+        }
       });
       
       gsap.to('.contact__heading span', {
