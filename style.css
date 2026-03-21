@@ -775,16 +775,17 @@ button {
   }
 
   .hero__eyebrow {
+    font-size: 0.85rem;
     margin-bottom: 1.5rem;
   }
 
   .hero__title {
-    font-size: 14vw;
+    font-size: 11vw;
     margin-bottom: 1.5rem;
   }
 
   .hero__sub {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 2.5rem;
   }
 
@@ -858,7 +859,7 @@ button {
   }
 
   .preloader__letter {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
   }
 
   .mobile-menu__link {
